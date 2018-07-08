@@ -1,7 +1,10 @@
 <?php
 
+namespace API\SecondAPI;
 
-interface SecondAPIInterface
+use API\ApiInterface;
+
+interface SecondAPIInterface extends ApiInterface
 {
     public function createShipmentInfo();
 

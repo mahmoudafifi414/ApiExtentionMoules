@@ -1,7 +1,10 @@
 <?php
 
+namespace API\ThirdAPI;
 
-interface ThirdAPIInterface
+use API\ApiInterface;
+
+interface ThirdAPIInterface extends ApiInterface
 {
     public function createShipmentAndGetWaybill();
 

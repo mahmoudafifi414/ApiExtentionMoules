@@ -1,5 +1,6 @@
 <?php
 
+namespace API\SecondAPI;
 
 class SecondAPIController implements SecondAPIInterface
 {
@@ -22,5 +23,16 @@ class SecondAPIController implements SecondAPIInterface
     public function getShipmentTrackingDetails()
     {
         // TODO: Implement getShipmentTrackingDetails() method.
+    }
+
+    public function createShipment()
+    {
+        echo 'do some logic here in SecondAPI<br>';
+        $this->createShipmentInfo();
+    }
+
+    public function trackShipment()
+    {
+        $this->getShipmentTrackingDetails();
     }
 }

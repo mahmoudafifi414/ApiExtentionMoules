@@ -1,5 +1,6 @@
 <?php
 
+namespace API\ThirdAPI;
 
 class ThirdAPIController implements ThirdAPIInterface
 {
@@ -17,5 +18,16 @@ class ThirdAPIController implements ThirdAPIInterface
     public function getTrackingDetails()
     {
         // TODO: Implement getTrackingDetails() method.
+    }
+
+    public function createShipment()
+    {
+        echo 'do some logic here in ThirdtAPI<br>';
+        $this->createShipmentAndGetWaybill();
+    }
+
+    public function trackShipment()
+    {
+        $this->getTrackingDetails();
     }
 }
