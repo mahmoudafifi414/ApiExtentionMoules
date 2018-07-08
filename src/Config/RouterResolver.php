@@ -1,13 +1,12 @@
 <?php
 
 namespace config;
-use ClientConsumer\HomeController;
 class RouterResolver
 {
     private $uris = array();
     private $methods = array();
 
-    public function add($uri, $method)
+    public function add(string $uri, string $method)
     {
         $this->uris[] = '/' . trim($uri, '/');
         if ($method != null) {
@@ -19,7 +18,6 @@ class RouterResolver
     {
         $uriParam = isset($_GET['uri']) ? '/' . $_GET['uri'] : '/';
         foreach ($this->uris as $key => $value) {
-
             if (preg_match("#^$value$#", $uriParam)) {
                 $dispatcher = explode('@', $this->methods[$key]);
                 $instance = new $dispatcher[0];

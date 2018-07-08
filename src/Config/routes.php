@@ -2,7 +2,8 @@
 require 'vendor/autoload.php';
 
 use Config\RouterResolver;
-use ClientConsumer\HomeController;
+use ClientConsumer\ConsumerImplementarController;
 $router = new RouterResolver();
-$router->add('createShipment', 'ClientConsumer\HomeController@execute');
+$router->add('createShipment', 'ClientConsumer\ConsumerImplementor@executeCreateShipment');
+$router->add('createShipment', 'ClientConsumer\ConsumerImplementor@executetrackShipment');
 $router->submit();
