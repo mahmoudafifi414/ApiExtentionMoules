@@ -7,7 +7,7 @@ class SecondAPIController implements SecondAPIInterface
 
     public function createShipmentInfo()
     {
-        // TODO: Implement createShipmentInfo() method.
+       echo 'create shipment info in second API <br>';
     }
 
     public function createShipmentInstructions()
@@ -22,12 +22,11 @@ class SecondAPIController implements SecondAPIInterface
 
     public function getShipmentTrackingDetails()
     {
-        // TODO: Implement getShipmentTrackingDetails() method.
+         echo 'Get Shipment tracking details in second API <br>';
     }
 
     public function createShipment()
     {
-        echo 'do some logic here in SecondAPI<br>';
         $this->createShipmentInfo();
     }
 

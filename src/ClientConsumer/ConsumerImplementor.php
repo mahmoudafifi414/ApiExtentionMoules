@@ -4,6 +4,7 @@ namespace ClientConsumer;
 
 
 use API\FirstAPI\FirstAPIController;
+use API\SecondAPI\SecondAPIController;
 
 class ConsumerImplementor
 {
@@ -16,7 +17,7 @@ class ConsumerImplementor
     }
     public function executetrackShipment()
     {
-        $firstController = new FirstAPIController();
+        $firstController = new SecondAPIController();
         $instance = new ClientController($firstController);
         $instance->trackShipment();
     }

@@ -20,12 +20,17 @@ class ClientController implements Clientnterface
         /*this is function for example to show how can call the functions with SOLID to not dependent on
         low level modules
         */
+        //also open close principle here
         $this->apiSpecified->createShipment();
     }
 
     public function trackShipment()
     {
-        // TODO: Implement trackShipment() method.
+        /*this is function for example to show how can call the functions with SOLID to not dependent on
+        low level modules
+        */
+        //also open close principle here
+        $this->apiSpecified->createShipment();
     }
 }
 

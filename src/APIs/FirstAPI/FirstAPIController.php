@@ -7,22 +7,21 @@ class FirstAPIController implements FirstAPIInterface
 
     public function createShipmentAndGetWaybill()
     {
-        echo 'create shipment And Get Way bill';
+        echo 'create shipment And Get Way bill in first API<br>';
     }
 
     public function getShipmentTrackingDetails()
     {
-        // TODO: Implement getShipmentTrackingDetails() method.
+        echo 'get shipment tracking details in first API<br>';
     }
 
     public function createShipment()
     {
-        echo 'do some logic here in FirstAPI<br>';
         $this->createShipmentAndGetWaybill();
     }
 
     public function trackShipment()
     {
-        $this->createShipmentAndGetWaybill();
+        $this->getShipmentTrackingDetails();
     }
 }

@@ -7,7 +7,7 @@ class ThirdAPIController implements ThirdAPIInterface
 
     public function createShipmentAndGetWaybill()
     {
-        // TODO: Implement createShipmentAndGetWaybill() method.
+        echo 'create shipment and get way bill in third API <br>';
     }
 
     public function registerNumberToGetTrackingDetails()
@@ -17,12 +17,11 @@ class ThirdAPIController implements ThirdAPIInterface
 
     public function getTrackingDetails()
     {
-        // TODO: Implement getTrackingDetails() method.
+        echo 'get tracking details in third API <br>';
     }
 
     public function createShipment()
     {
-        echo 'do some logic here in ThirdtAPI<br>';
         $this->createShipmentAndGetWaybill();
     }
 
