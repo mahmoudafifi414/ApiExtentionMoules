@@ -7,7 +7,6 @@ use API\ApiInterface;
 interface FirstAPIInterface extends ApiInterface
 {
     //functions of the first API interface
-    public function createShipment();
 
     public function createShipmentAndGetWaybill();
 

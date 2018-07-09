@@ -5,23 +5,25 @@ namespace API\FirstAPI;
 class FirstAPIController implements FirstAPIInterface
 {
 
-    public function createShipmentAndGetWaybill()
+    public function createShipmentAndGetWaybill(): string
     {
-        echo 'create shipment And Get Way bill in first API<br>';
+        $message = array('status' => 'success');
+        return json_encode($message, JSON_PRETTY_PRINT);
     }
 
-    public function getShipmentTrackingDetails()
+    public function getShipmentTrackingDetails(): string
     {
-        echo 'get shipment tracking details in first API<br>';
+        $message = array('status' => 'success', 'data' => 'some data');
+        return json_encode($message, JSON_PRETTY_PRINT);
     }
 
-    public function createShipment()
+    public function createShipment(): string
     {
-        $this->createShipmentAndGetWaybill();
+        return $this->createShipmentAndGetWaybill();
     }
 
-    public function trackShipment()
+    public function trackShipment(): string
     {
-        $this->getShipmentTrackingDetails();
+        return $this->getShipmentTrackingDetails();
     }
 }

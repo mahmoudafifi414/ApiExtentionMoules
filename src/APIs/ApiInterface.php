@@ -4,7 +4,7 @@ namespace API;
 
 interface ApiInterface
 {
-    public function createShipment();
+    public function createShipment(): string;
 
-    public function trackShipment();
+    public function trackShipment(): string;
 }

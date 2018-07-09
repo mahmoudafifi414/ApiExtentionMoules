@@ -5,9 +5,10 @@ namespace API\ThirdAPI;
 class ThirdAPIController implements ThirdAPIInterface
 {
 
-    public function createShipmentAndGetWaybill()
+    public function createShipmentAndGetWaybill(): string
     {
-        echo 'create shipment and get way bill in third API <br>';
+        $message = array('status' => 'success');
+        return json_encode($message, JSON_PRETTY_PRINT);
     }
 
     public function registerNumberToGetTrackingDetails()
@@ -15,18 +16,19 @@ class ThirdAPIController implements ThirdAPIInterface
         // TODO: Implement registerNumberToGetTrackingDetails() method.
     }
 
-    public function getTrackingDetails()
+    public function getTrackingDetails(): string
     {
-        echo 'get tracking details in third API <br>';
+        $message = array('status' => 'success', 'data' => 'some data');
+        return json_encode($message, JSON_PRETTY_PRINT);
     }
 
-    public function createShipment()
+    public function createShipment(): string
     {
-        $this->createShipmentAndGetWaybill();
+        return $this->createShipmentAndGetWaybill();
     }
 
-    public function trackShipment()
+    public function trackShipment(): string
     {
-        $this->getTrackingDetails();
+        return $this->getTrackingDetails();
     }
 }

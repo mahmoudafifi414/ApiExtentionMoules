@@ -5,9 +5,10 @@ namespace API\SecondAPI;
 class SecondAPIController implements SecondAPIInterface
 {
 
-    public function createShipmentInfo()
+    public function createShipmentInfo(): string
     {
-       echo 'create shipment info in second API <br>';
+        $message = array('status' => 'success');
+        return json_encode($message, JSON_PRETTY_PRINT);
     }
 
     public function createShipmentInstructions()
@@ -20,18 +21,19 @@ class SecondAPIController implements SecondAPIInterface
         // TODO: Implement getShipmentWaybill() method.
     }
 
-    public function getShipmentTrackingDetails()
+    public function getShipmentTrackingDetails(): string
     {
-         echo 'Get Shipment tracking details in second API <br>';
+        $message = array('status' => 'success', 'data' => 'some data');
+        return json_encode($message, JSON_PRETTY_PRINT);
     }
 
-    public function createShipment()
+    public function createShipment():string
     {
-        $this->createShipmentInfo();
+        return $this->createShipmentInfo();
     }
 
-    public function trackShipment()
+    public function trackShipment():string
     {
-        $this->getShipmentTrackingDetails();
+        return $this->getShipmentTrackingDetails();
     }
 }

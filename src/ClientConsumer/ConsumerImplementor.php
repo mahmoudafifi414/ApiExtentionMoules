@@ -13,12 +13,12 @@ class ConsumerImplementor
     {
         $firstController = new FirstAPIController();
         $instance = new ClientController($firstController);
-        $instance->createShipment();
+        echo $instance->createShipment();
     }
     public function executetrackShipment()
     {
-        $firstController = new SecondAPIController();
+        $firstController = new FirstAPIController();
         $instance = new ClientController($firstController);
-        $instance->trackShipment();
+        echo $instance->trackShipment();
     }
 }
